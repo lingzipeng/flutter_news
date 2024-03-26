@@ -39,20 +39,20 @@ class SignUpPage extends GetView<SignUpController> {
           inputTextEdit(
             controller: controller.fullnameController,
             keyboardType: TextInputType.text,
-            hintText: "Full name",
+            hintText: "名字",
             marginTop: 0,
           ),
           // email input
           inputTextEdit(
             controller: controller.emailController,
             keyboardType: TextInputType.emailAddress,
-            hintText: "Email",
+            hintText: "邮箱",
           ),
           // password input
           inputTextEdit(
             controller: controller.passController,
             keyboardType: TextInputType.visiblePassword,
-            hintText: "Password",
+            hintText: "密码",
             isPassword: true,
           ),
 
@@ -64,7 +64,7 @@ class SignUpPage extends GetView<SignUpController> {
               onPressed: controller.handleSignUp,
               width: 295.w,
               fontWeight: FontWeight.w600,
-              title: "Create an account",
+              title: "创建账号",
             ),
           ),
           // Spacer(),
@@ -75,7 +75,7 @@ class SignUpPage extends GetView<SignUpController> {
             child: TextButton(
               onPressed: controller.handleFogotPassword,
               child: Text(
-                "Fogot password?",
+                "忘记密码?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: AppColors.secondaryElementText,
@@ -101,7 +101,7 @@ class SignUpPage extends GetView<SignUpController> {
         children: <Widget>[
           // title
           Text(
-            "Or sign in with social networks",
+            "其他登录",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.primaryText,
@@ -120,13 +120,13 @@ class SignUpPage extends GetView<SignUpController> {
                   width: 88,
                   iconFileName: "twitter",
                 ),
-                Spacer(),
+                const Spacer(),
                 btnFlatButtonBorderOnlyWidget(
                   onPressed: () {},
                   width: 88,
                   iconFileName: "google",
                 ),
-                Spacer(),
+                const Spacer(),
                 btnFlatButtonBorderOnlyWidget(
                   onPressed: () {},
                   width: 88,
@@ -149,7 +149,7 @@ class SignUpPage extends GetView<SignUpController> {
         width: 294,
         gbColor: AppColors.secondaryElement,
         fontColor: AppColors.primaryText,
-        title: "I have an account",
+        title: "已有账号",
         fontWeight: FontWeight.w500,
         fontSize: 16,
       ),

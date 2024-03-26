@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
-      builder: (BuildContext, Widget) => RefreshConfiguration(
-        headerBuilder: () => ClassicHeader(),
-        footerBuilder: () => ClassicFooter(),
+      designSize: const Size(375, 812),
+      builder: (context, widget) => RefreshConfiguration(
+        headerBuilder: () => const ClassicHeader(),
+        footerBuilder: () => const ClassicFooter(),
         hideFooterWhenNotFull: true,
         headerTriggerDistance: 80,
         maxOverScrollExtent: 100,
@@ -40,14 +40,14 @@ class MyApp extends StatelessWidget {
           builder: EasyLoading.init(),
           translations: TranslationService(),
           navigatorObservers: [AppPages.observer],
-          localizationsDelegates: [
+          localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: ConfigStore.to.languages,
           locale: ConfigStore.to.locale,
-          fallbackLocale: Locale('en', 'US'),
+          fallbackLocale: const Locale('en', 'US'),
           enableLog: true,
           logWriterCallback: Logger.write,
         ),

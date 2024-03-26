@@ -9,6 +9,8 @@ import '../main/view.dart';
 import 'index.dart';
 
 class ApplicationPage extends GetView<ApplicationController> {
+  const ApplicationPage({super.key});
+
   // 顶部导航
   AppBar _buildAppBar() {
     return transparentAppBar(
@@ -23,7 +25,7 @@ class ApplicationPage extends GetView<ApplicationController> {
             )),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: AppColors.primaryText,
             ),
@@ -35,15 +37,15 @@ class ApplicationPage extends GetView<ApplicationController> {
   // 内容页
   Widget _buildPageView() {
     return PageView(
-      physics: NeverScrollableScrollPhysics(),
-      children: <Widget>[
-        MainPage(),
-        CategoryPage(),
-        Text('BookmarksPage'),
-        Text('AccountPage'),
-      ],
+      physics: const NeverScrollableScrollPhysics(),
       controller: controller.pageController,
       onPageChanged: controller.handlePageChanged,
+      children: <Widget>[
+        const MainPage(),
+        CategoryPage(),
+        const Text('书签页'),
+        const Text('我的页面'),
+      ],
     );
   }
 
@@ -52,7 +54,6 @@ class ApplicationPage extends GetView<ApplicationController> {
     return Obx(() => BottomNavigationBar(
           items: controller.bottomTabs,
           currentIndex: controller.state.page,
-          // fixedColor: AppColors.primaryElement,
           type: BottomNavigationBarType.fixed,
           onTap: controller.handleNavBarTap,
           showSelectedLabels: false,

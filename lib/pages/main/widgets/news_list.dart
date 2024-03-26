@@ -129,7 +129,7 @@ class NewsListWidget extends GetView<MainController> {
                       // 更多
                       Spacer(),
                       InkWell(
-                        child: Icon(
+                        child: const Icon(
                           Icons.more_horiz,
                           color: AppColors.primaryText,
                           size: 24,
@@ -156,15 +156,15 @@ class NewsListWidget extends GetView<MainController> {
               // 新闻行
               List<Widget> widgets = <Widget>[
                 _buildListItem(item),
-                Divider(height: 1),
+                const Divider(height: 1),
               ];
 
               // 每 5 条 显示广告
               int index = controller.state.newsPageList.items.indexOf(item);
               if (((index + 1) % 5) == 0) {
                 widgets.addAll(<Widget>[
-                  AdWidget(),
-                  Divider(height: 1),
+                  const AdWidget(),
+                  const Divider(height: 1),
                 ]);
               }
 

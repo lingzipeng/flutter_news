@@ -26,7 +26,7 @@ class Global {
 
   static void setSystemUi() {
     if (GetPlatform.isAndroid) {
-      SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
+      SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,

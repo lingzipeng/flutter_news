@@ -93,7 +93,7 @@ class SignInPage extends GetView<SignInController> {
           inputTextEdit(
             controller: controller.emailController,
             keyboardType: TextInputType.emailAddress,
-            hintText: "Email",
+            hintText: "邮箱",
             marginTop: 0,
             // autofocus: true,
           ),
@@ -101,7 +101,7 @@ class SignInPage extends GetView<SignInController> {
           inputTextEdit(
             controller: controller.passController,
             keyboardType: TextInputType.visiblePassword,
-            hintText: "Password",
+            hintText: "密码",
             isPassword: true,
           ),
 
@@ -115,14 +115,14 @@ class SignInPage extends GetView<SignInController> {
                 btnFlatButtonWidget(
                   onPressed: controller.handleNavSignUp,
                   gbColor: AppColors.thirdElement,
-                  title: "Sign up",
+                  title: "注册",
                 ),
                 Spacer(),
                 // 登录
                 btnFlatButtonWidget(
                   onPressed: controller.handleSignIn,
                   gbColor: AppColors.primaryElement,
-                  title: "Sign in",
+                  title: "登录",
                 ),
               ],
             ),
@@ -135,7 +135,7 @@ class SignInPage extends GetView<SignInController> {
             child: TextButton(
               onPressed: controller.handleFogotPassword,
               child: Text(
-                "Fogot password?",
+                "忘记密码?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: AppColors.secondaryElementText,
@@ -161,7 +161,7 @@ class SignInPage extends GetView<SignInController> {
         children: <Widget>[
           // title
           Text(
-            "Or sign in with social networks",
+            "其他登录",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.primaryText,
@@ -209,7 +209,7 @@ class SignInPage extends GetView<SignInController> {
         width: 294,
         gbColor: AppColors.secondaryElement,
         fontColor: AppColors.primaryText,
-        title: "Sign up",
+        title: "注册",
         fontWeight: FontWeight.w500,
         fontSize: 16,
       ),

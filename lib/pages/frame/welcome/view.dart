@@ -109,12 +109,12 @@ class WelcomePage extends GetView<WelcomeController> {
             }
             return AppColors.primaryElement;
           }),
-          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+          shape: MaterialStateProperty.all(const RoundedRectangleBorder(
             borderRadius: Radii.k6pxRadius,
           )),
         ),
-        child: Text("Get started"),
         onPressed: controller.handleNavSignIn,
+        child: const Text("Get started"),
       ),
     );
   }
@@ -142,7 +142,7 @@ class WelcomePage extends GetView<WelcomeController> {
               "You can get Premium to unlock hundreds of publications",
               40,
             ),
-            Spacer(),
+            const Spacer(),
             _buildStartButton(context),
           ],
         ),

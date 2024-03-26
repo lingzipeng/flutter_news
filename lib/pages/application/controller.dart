@@ -94,9 +94,9 @@ class ApplicationController extends GetxController {
     // handleIncomingLinks();
 
     // 准备一些静态数据
-    tabTitles = ['Welcome', 'Cagegory', 'Bookmarks', 'Account'];
+    tabTitles = ['Welcome', 'Category', 'Bookmarks', 'Account'];
     bottomTabs = <BottomNavigationBarItem>[
-      new BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(
           Iconfont.home,
           color: AppColors.tabBarElement,
@@ -108,7 +108,7 @@ class ApplicationController extends GetxController {
         label: 'main',
         backgroundColor: AppColors.primaryBackground,
       ),
-      new BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(
           Iconfont.grid,
           color: AppColors.tabBarElement,
@@ -120,7 +120,7 @@ class ApplicationController extends GetxController {
         label: 'category',
         backgroundColor: AppColors.primaryBackground,
       ),
-      new BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(
           Iconfont.tag,
           color: AppColors.tabBarElement,
@@ -132,7 +132,7 @@ class ApplicationController extends GetxController {
         label: 'tag',
         backgroundColor: AppColors.primaryBackground,
       ),
-      new BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(
           Iconfont.me,
           color: AppColors.tabBarElement,
@@ -145,7 +145,7 @@ class ApplicationController extends GetxController {
         backgroundColor: AppColors.primaryBackground,
       ),
     ];
-    pageController = new PageController(initialPage: state.page);
+    pageController = PageController(initialPage: state.page);
   }
 
   @override

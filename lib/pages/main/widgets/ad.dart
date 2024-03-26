@@ -9,6 +9,8 @@ import '../index.dart';
 
 /// ad广告
 class AdWidget extends GetView<MainController> {
+  const AdWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +19,7 @@ class AdWidget extends GetView<MainController> {
       padding: EdgeInsets.all(20.w),
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           border: Border.fromBorderSide(Borders.primaryBorder),
           borderRadius: Radii.k6pxRadius,
         ),
@@ -25,7 +27,7 @@ class AdWidget extends GetView<MainController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Tired of Ads? Get Premium - \$9.99",
+              "厌倦了广告？获取高级版 - \$9.99",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppColors.primaryText,

@@ -117,7 +117,7 @@ class NewsRecommendWidget extends GetView<MainController> {
                       // 更多
                       Spacer(),
                       InkWell(
-                        child: Icon(
+                        child: const Icon(
                           Icons.more_horiz,
                           color: AppColors.primaryText,
                           size: 24,
