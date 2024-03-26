@@ -6,9 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:uni_links/uni_links.dart';
 
-
 import '../../commom/routers/names.dart';
-import '../../commom/utils/iconfont.dart';
 import '../../commom/values/colors.dart';
 import 'index.dart';
 
@@ -88,8 +86,6 @@ class ApplicationController extends GetxController {
 
   @override
   void onInit() {
-    super.onInit();
-
     // handleInitialUri();
     // handleIncomingLinks();
 
@@ -98,23 +94,31 @@ class ApplicationController extends GetxController {
     bottomTabs = <BottomNavigationBarItem>[
       const BottomNavigationBarItem(
         icon: Icon(
-          Iconfont.home,
+          // Iconfont.home,
+          Icons.home,
           color: AppColors.tabBarElement,
         ),
         activeIcon: Icon(
-          Iconfont.home,
+          Icons.home,
           color: AppColors.secondaryElementText,
         ),
+        // icon: Image.asset(
+        //   "assets/tabbar_mainframe@3x.png",
+        //     width: 25.0, height: 25.0
+        // ),
+        // activeIcon: Image.asset(
+        //   "assets/tabbar_mainframeHL@3x.png",
+        // ),
         label: 'main',
         backgroundColor: AppColors.primaryBackground,
       ),
       const BottomNavigationBarItem(
         icon: Icon(
-          Iconfont.grid,
+          Icons.shop,
           color: AppColors.tabBarElement,
         ),
         activeIcon: Icon(
-          Iconfont.grid,
+          Icons.shop,
           color: AppColors.secondaryElementText,
         ),
         label: 'category',
@@ -122,11 +126,11 @@ class ApplicationController extends GetxController {
       ),
       const BottomNavigationBarItem(
         icon: Icon(
-          Iconfont.tag,
+          Icons.tab,
           color: AppColors.tabBarElement,
         ),
         activeIcon: Icon(
-          Iconfont.tag,
+          Icons.tab,
           color: AppColors.secondaryElementText,
         ),
         label: 'tag',
@@ -134,11 +138,11 @@ class ApplicationController extends GetxController {
       ),
       const BottomNavigationBarItem(
         icon: Icon(
-          Iconfont.me,
+          Icons.manage_accounts,
           color: AppColors.tabBarElement,
         ),
         activeIcon: Icon(
-          Iconfont.me,
+          Icons.manage_accounts,
           color: AppColors.secondaryElementText,
         ),
         label: 'my',
@@ -146,6 +150,11 @@ class ApplicationController extends GetxController {
       ),
     ];
     pageController = PageController(initialPage: state.page);
+    // print("==========");
+    // for (var item in bottomTabs) {
+    //   print('Icon: ${item.icon}, Active Icon: ${item.activeIcon}, Label: ${item.label}');
+    // }
+    super.onInit();
   }
 
   @override

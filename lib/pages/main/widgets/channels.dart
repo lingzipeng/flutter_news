@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../commom/values/colors.dart';
-import '../../../commom/values/shadows.dart';
+
+import '../../../commom/values/values.dart';
 import '../index.dart';
 
 /// 频道导航
@@ -60,7 +60,7 @@ class NewsChannelsWidget extends GetView<MainController> {
                                     top: 10.w,
                                     right: 10.w,
                                     child: Image.asset(
-                                      "assets/images/channel-${item.code}.png",
+                                      "assets/images/channel-cnn.png",
                                       fit: BoxFit.cover,
                                     ),
                                   ),

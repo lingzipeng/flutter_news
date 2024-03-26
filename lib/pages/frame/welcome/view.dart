@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../commom/values/colors.dart';
-import '../../../commom/values/radii.dart';
+import '../../../commom/values/values.dart';
 import 'index.dart';
 
 class WelcomePage extends GetView<WelcomeController> {
+  const WelcomePage({super.key});
+
   /// 页头标题
   Widget _buildPageHeadTitle() {
     return Container(
@@ -62,7 +63,7 @@ class WelcomePage extends GetView<WelcomeController> {
               fit: BoxFit.none,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             width: 195.w,
             child: Text(

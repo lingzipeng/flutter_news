@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../routers/names.dart';
-import '../store/config.dart';
-import '../store/user.dart';
+import '../store/store.dart';
 
 /// 第一次欢迎页面
 class RouteWelcomeMiddleware extends GetMiddleware {

@@ -9,7 +9,7 @@ import '../index.dart';
 
 /// 推荐阅读
 class NewsRecommendWidget extends GetView<MainController> {
-  NewsRecommendWidget();
+  const NewsRecommendWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +23,12 @@ class NewsRecommendWidget extends GetView<MainController> {
                 // 图
                 InkWell(
                   onTap: () {
-                    // ExtendedNavigator.rootNavigator.pushNamed(
-                    //   Routes.detailsPageRoute,
-                    //   arguments: DetailsPageArguments(item: item),
-                    // );
+                    print("点击了主页大图");
                   },
                   child: netImageCached(
                     controller.state.newsRecommend.thumbnail,
                     width: 335.w,
-                    height: 290.h,
+                    height: 230.h,
                   ),
                 ),
                 // 作者
@@ -115,7 +112,7 @@ class NewsRecommendWidget extends GetView<MainController> {
                         ),
                       ),
                       // 更多
-                      Spacer(),
+                      const Spacer(),
                       InkWell(
                         child: const Icon(
                           Icons.more_horiz,

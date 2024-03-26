@@ -11,7 +11,7 @@ import 'ad.dart';
 
 /// 新闻行 Item
 class NewsListWidget extends GetView<MainController> {
-  NewsListWidget();
+  const NewsListWidget({super.key});
 
   Widget _buildListItem(NewsItem item) {
     return Container(
@@ -31,11 +31,11 @@ class NewsListWidget extends GetView<MainController> {
             },
             child: SizedBox(
               width: 121.w,
-              height: 121.w,
+              height: 91.w,
               child: netImageCached(
                 item.thumbnail ?? "",
                 width: 121.w,
-                height: 121.w,
+                height: 91.w,
               ),
             ),
           ),
@@ -47,7 +47,7 @@ class NewsListWidget extends GetView<MainController> {
               children: <Widget>[
                 // 作者
                 Container(
-                  margin: EdgeInsets.all(0),
+                  margin: const EdgeInsets.all(0),
                   child: Text(
                     item.author ?? "",
                     style: TextStyle(
@@ -127,7 +127,7 @@ class NewsListWidget extends GetView<MainController> {
                         ),
                       ),
                       // 更多
-                      Spacer(),
+                      const Spacer(),
                       InkWell(
                         child: const Icon(
                           Icons.more_horiz,

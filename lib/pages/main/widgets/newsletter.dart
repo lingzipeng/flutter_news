@@ -4,8 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../commom/values/colors.dart';
-import '../../../commom/widgets/button.dart';
-import '../../../commom/widgets/input.dart';
 import '../../../commom/widgets/toast.dart';
 import '../index.dart';
 
@@ -21,7 +19,7 @@ class NewsletterWidget extends GetView<MainController> {
           Row(
             children: <Widget>[
               Text(
-                'Newsletter',
+                '双十一优惠大放送，点击查看详情',
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 18.sp,
@@ -29,7 +27,7 @@ class NewsletterWidget extends GetView<MainController> {
                   color: AppColors.thirdElement,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               IconButton(
                 icon: Icon(
                   Icons.close,
@@ -42,25 +40,25 @@ class NewsletterWidget extends GetView<MainController> {
           ),
 
           // email
-          inputEmailEdit(
-            marginTop: 19,
-            keyboardType: TextInputType.emailAddress,
-            hintText: "Email",
-            isPassword: false,
-            controller: null,
-          ),
+          // inputEmailEdit(
+          //   marginTop: 19,
+          //   keyboardType: TextInputType.emailAddress,
+          //   hintText: "Email",
+          //   isPassword: false,
+          //   controller: null,
+          // ),
 
           // btn subcrible
-          Padding(
-            padding: const EdgeInsets.only(top: 15),
-            child: btnFlatButtonWidget(
-              onPressed: () {},
-              width: 335.w,
-              height: 44.h,
-              fontWeight: FontWeight.w600,
-              title: "Subscribe",
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 15),
+          //   child: btnFlatButtonWidget(
+          //     onPressed: () {},
+          //     width: 335.w,
+          //     height: 44.h,
+          //     fontWeight: FontWeight.w600,
+          //     title: "Subscribe",
+          //   ),
+          // ),
 
           // disc
           Container(

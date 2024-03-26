@@ -4,8 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'commom/services/storage.dart';
-import 'commom/store/config.dart';
-import 'commom/store/user.dart';
+import 'commom/store/store.dart';
 import 'commom/utils/loading.dart';
 
 /// 全局静态数据

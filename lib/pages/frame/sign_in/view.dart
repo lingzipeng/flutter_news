@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../commom/values/colors.dart';
-import '../../../commom/values/shadows.dart';
-import '../../../commom/widgets/button.dart';
-import '../../../commom/widgets/input.dart';
+import '../../../commom/values/values.dart';
+import '../../../commom/widgets/widgets.dart';
 import 'index.dart';
 
 class SignInPage extends GetView<SignInController> {
+  const SignInPage({super.key});
+
   // logo
   Widget _buildLogo() {
     return Container(
@@ -32,7 +32,7 @@ class SignInPage extends GetView<SignInController> {
                     height: 76.w,
                     decoration: BoxDecoration(
                       color: AppColors.primaryBackground,
-                      boxShadow: [
+                      boxShadow: const [
                         Shadows.primaryShadow,
                       ],
                       borderRadius: BorderRadius.all(
@@ -44,7 +44,7 @@ class SignInPage extends GetView<SignInController> {
                 Positioned(
                   top: 13.w,
                   child: Image.asset(
-                    "assets/images/logo.png",
+                    "assets/images/a.png",
                     fit: BoxFit.none,
                   ),
                 ),
@@ -54,7 +54,7 @@ class SignInPage extends GetView<SignInController> {
           Container(
             margin: EdgeInsets.only(top: 15.h),
             child: Text(
-              "SECTOR",
+              "今日",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppColors.primaryText,
@@ -70,9 +70,9 @@ class SignInPage extends GetView<SignInController> {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.primaryText,
-              fontFamily: "Avenir",
+              fontFamily: "Avenger",
               fontWeight: FontWeight.w400,
-              fontSize: 16.sp,
+              fontSize: 24.sp,
               height: 1,
             ),
           ),
@@ -139,7 +139,7 @@ class SignInPage extends GetView<SignInController> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: AppColors.secondaryElementText,
-                  fontFamily: "Avenir",
+                  fontFamily: "Avenger",
                   fontWeight: FontWeight.w400,
                   fontSize: 16.sp,
                   height: 1, // 设置下行高，否则字体下沉
@@ -165,7 +165,7 @@ class SignInPage extends GetView<SignInController> {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.primaryText,
-              fontFamily: "Avenir",
+              fontFamily: "Avenger",
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
             ),

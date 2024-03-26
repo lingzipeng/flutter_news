@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../values/colors.dart';
-import '../values/radii.dart';
+import '../values/values.dart';
 
 /// 扁平圆角按钮
 Widget btnFlatButtonWidget({

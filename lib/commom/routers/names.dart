@@ -6,4 +6,6 @@ class AppRoutes {
 
   static const Application = '/application';
   static const Category = '/category';
+  static const My = '/my';
+  static const Video = '/video';
 }

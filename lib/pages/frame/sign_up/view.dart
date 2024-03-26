@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../commom/values/colors.dart';
-import '../../../commom/widgets/app.dart';
-import '../../../commom/widgets/button.dart';
-import '../../../commom/widgets/input.dart';
+import '../../../commom/widgets/widgets.dart';
 import 'index.dart';
 
 class SignUpPage extends GetView<SignUpController> {
+  const SignUpPage({super.key});
+
   // logo
   Widget _buildLogo() {
     return Container(

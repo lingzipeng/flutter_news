@@ -7,8 +7,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart' hide FormData;
 
 import '../store/user.dart';
-import '../values/cache.dart';
-import '../values/server.dart';
+import '../values/values.dart';
 import 'loading.dart';
 
 /*

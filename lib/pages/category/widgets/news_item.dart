@@ -25,7 +25,7 @@ Widget newsListItem(NewsItem item) {
           child: netImageCached(
             item.thumbnail ?? "",
             width: 121.w,
-            height: 121.w,
+            height: 91.w,
           ),
         ),
         // 右侧

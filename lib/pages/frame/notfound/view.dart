@@ -5,9 +5,11 @@ import 'index.dart';
 import 'widgets/widgets.dart';
 
 class NotfoundPage extends GetView<NotfoundController> {
+  const NotfoundPage({super.key});
+
   // 内容页
   Widget _buildView() {
-    return HellowordWidget();
+    return const HellowordWidget();
   }
 
   @override

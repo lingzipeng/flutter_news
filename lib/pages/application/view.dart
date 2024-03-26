@@ -6,6 +6,8 @@ import '../../commom/values/colors.dart';
 import '../../commom/widgets/app.dart';
 import '../category/view.dart';
 import '../main/view.dart';
+import '../my/view.dart';
+import '../video/view.dart';
 import 'index.dart';
 
 class ApplicationPage extends GetView<ApplicationController> {
@@ -43,8 +45,8 @@ class ApplicationPage extends GetView<ApplicationController> {
       children: <Widget>[
         const MainPage(),
         CategoryPage(),
-        const Text('书签页'),
-        const Text('我的页面'),
+        const VideoPage(),
+        const MyPage(),
       ],
     );
   }

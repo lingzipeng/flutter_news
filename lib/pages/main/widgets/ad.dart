@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../commom/values/borders.dart';
-import '../../../commom/values/colors.dart';
-import '../../../commom/values/radii.dart';
+import '../../../commom/values/values.dart';
 import '../index.dart';
 
 /// ad广告

@@ -12,13 +12,13 @@ class MainPage extends GetView<MainController> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          NewsCategoriesWidget(),
+          const NewsCategoriesWidget(),
           const Divider(height: 1),
-          NewsRecommendWidget(),
+          const NewsRecommendWidget(),
           const Divider(height: 1),
-          NewsChannelsWidget(),
+          const NewsChannelsWidget(),
           const Divider(height: 1),
-          NewsListWidget(),
+          const NewsListWidget(),
           const Divider(height: 1),
           NewsletterWidget(),
         ],

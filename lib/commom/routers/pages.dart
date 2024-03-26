@@ -5,14 +5,12 @@ import '../../pages/application/bindings.dart';
 import '../../pages/application/view.dart';
 import '../../pages/category/bindings.dart';
 import '../../pages/category/view.dart';
-import '../../pages/frame/sign_in/bindings.dart';
-import '../../pages/frame/sign_in/view.dart';
-import '../../pages/frame/sign_up/bindings.dart';
-import '../../pages/frame/sign_up/view.dart';
-import '../../pages/frame/welcome/bindings.dart';
-import '../../pages/frame/welcome/view.dart';
-import '../middlewares/router_auth.dart';
-import '../middlewares/router_welcome.dart';
+import '../../pages/frame/sign_in/index.dart';
+import '../../pages/frame/sign_up/index.dart';
+import '../../pages/frame/welcome/index.dart';
+import '../../pages/my/index.dart';
+import '../../pages/video/index.dart';
+import '../middlewares/middlewares.dart';
 import 'routes.dart';
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
@@ -23,7 +21,7 @@ class AppPages {
     // 免登陆
     GetPage(
       name: AppRoutes.INITIAL,
-      page: () => WelcomePage(),
+      page: () => const WelcomePage(),
       binding: WelcomeBinding(),
       middlewares: [
         RouteWelcomeMiddleware(priority: 1),
@@ -31,7 +29,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
     GetPage(
@@ -43,7 +41,7 @@ class AppPages {
     // 需要登录
     GetPage(
       name: AppRoutes.Application,
-      page: () => ApplicationPage(),
+      page: () => const ApplicationPage(),
       binding: ApplicationBinding(),
       middlewares: [
         RouteAuthMiddleware(priority: 1),
@@ -55,6 +53,18 @@ class AppPages {
       name: AppRoutes.Category,
       page: () => CategoryPage(),
       binding: CategoryBinding(),
+    ),
+    //我的列表
+    GetPage(
+      name: AppRoutes.My,
+      page: () => MyPage(),
+      binding: MyBinding(),
+    ),
+    //视频的列表
+    GetPage(
+      name: AppRoutes.Video,
+      page: () => VideoPage(),
+      binding: VideoBinding(),
     ),
   ];
 }

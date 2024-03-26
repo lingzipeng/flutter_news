@@ -19,9 +19,6 @@ class SignInController extends GetxController {
   // 密码的控制器
   final TextEditingController passController = TextEditingController();
 
-  // final MyRepository repository;
-  // SignInController({@required this.repository}) : assert(repository != null);
-
   // 跳转 注册界面
   handleNavSignUp() {
     Get.toNamed(AppRoutes.SIGN_UP);
@@ -34,14 +31,6 @@ class SignInController extends GetxController {
 
   // 执行登录操作
   handleSignIn() async {
-    // if (!duIsEmail(_emailController.value.text)) {
-    //   toastInfo(msg: '请正确输入邮件');
-    //   return;
-    // }
-    // if (!duCheckStringLength(_passController.value.text, 6)) {
-    //   toastInfo(msg: '密码不能小于6位');
-    //   return;
-    // }
 
     UserLoginRequestEntity params = UserLoginRequestEntity(
       email: emailController.value.text,
@@ -54,11 +43,6 @@ class SignInController extends GetxController {
     UserStore.to.saveProfile(userProfile);
 
     Get.offAndToNamed(AppRoutes.Application);
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
   }
 
   @override

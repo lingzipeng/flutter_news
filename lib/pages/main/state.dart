@@ -1,9 +1,7 @@
 
 import 'package:get/get.dart';
 
-import '../../commom/entities/categories.dart';
-import '../../commom/entities/channels.dart';
-import '../../commom/entities/news.dart';
+import '../../commom/entities/entities.dart';
 
 class MainState {
   // 分类
