@@ -162,7 +162,7 @@ class SignUpPage extends GetView<SignUpController> {
       resizeToAvoidBottomInset: false,
       appBar: transparentAppBar(
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: AppColors.primaryText,
           ),
@@ -170,7 +170,7 @@ class SignUpPage extends GetView<SignUpController> {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.info_outline,
               color: AppColors.primaryText,
             ),
@@ -181,10 +181,10 @@ class SignUpPage extends GetView<SignUpController> {
       body: Center(
         child: Column(
           children: <Widget>[
-            Divider(height: 1),
+            const Divider(height: 0.5,color: AppColors.thirdElementText),
             _buildLogo(),
             _buildInputForm(),
-            Spacer(),
+            const Spacer(),
             _buildThirdPartyLogin(),
             _buildHaveAccountButton(),
           ],

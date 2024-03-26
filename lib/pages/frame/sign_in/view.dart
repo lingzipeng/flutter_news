@@ -117,7 +117,7 @@ class SignInPage extends GetView<SignInController> {
                   gbColor: AppColors.thirdElement,
                   title: "注册",
                 ),
-                Spacer(),
+                const Spacer(),
                 // 登录
                 btnFlatButtonWidget(
                   onPressed: controller.handleSignIn,
@@ -131,7 +131,7 @@ class SignInPage extends GetView<SignInController> {
 
           // Fogot password
           Padding(
-            padding: EdgeInsets.only(top: 8.0),
+            padding: const EdgeInsets.only(top: 8.0),
             child: TextButton(
               onPressed: controller.handleFogotPassword,
               child: Text(
@@ -180,13 +180,13 @@ class SignInPage extends GetView<SignInController> {
                   width: 88,
                   iconFileName: "twitter",
                 ),
-                Spacer(),
+                const Spacer(),
                 btnFlatButtonBorderOnlyWidget(
                   onPressed: () {},
                   width: 88,
                   iconFileName: "google",
                 ),
-                Spacer(),
+                const Spacer(),
                 btnFlatButtonBorderOnlyWidget(
                   onPressed: () {},
                   width: 88,
@@ -225,7 +225,7 @@ class SignInPage extends GetView<SignInController> {
           children: <Widget>[
             _buildLogo(),
             _buildInputForm(),
-            Spacer(),
+            const Spacer(),
             _buildThirdPartyLogin(),
             _buildSignupButton(),
           ],
